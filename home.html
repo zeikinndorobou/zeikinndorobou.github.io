@@ -2,18 +2,27 @@
 <html>
 <head>
   <style>
-    .example{
-      display: inline-block;
+  .center{
+   text-align: center; 
+   }
+  .box img{
+    animation: rotation-3d 1.0s linear infinite;
+  }
+  @keyframes rotation-3d{
+    0%{
+      transform: rotate3d(1,1,1,0deg);
     }
-    .example img{
-      display: block;
+    100%{
+      transform: rotate3d(1,1,1,360deg);
     }
-    body{
-      background-image: url("kusari.png");
-      background-size: 230px;
+  }
+  body{
+    background-image: url("kusari.png");
+    background-size: 230px;
     }
   </style>
   <body>
+    <a href="">
     aaa
   </body>
 </head>
