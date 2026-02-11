@@ -2,32 +2,44 @@
 <html>
 <head>
   <style>
-  .center{
-   max-width: 30px;
-   height: auto;
-   text-align: center; 
-   }
-  .box img{
-    animation: rotation-3d 1.0s linear infinite;
-    width: 30px;
-    height: auto;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  }
-  @keyframes rotation-3d{
-    0%{
-      transform: rotate3d(1,1,1,0deg);
+    .perfect-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f8f9fa;
     }
-    100%{
-      transform: rotate3d(1,1,1,360deg);
+    
+    .perfect-center img {
+      max-width: 600px;
+      width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
     }
-  }
-  body{
-    background-image: url("kusari.png");
-    background-size: 230px;
+    
+    .box img {
+      animation: rotation-3d 1.0s linear infinite;
+      width: 30px;
+      height: auto;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes rotation-3d{
+      0% {
+        transform: rotate3d(1,1,1,0deg);
+      }
+      100% {
+        transform: rotate3d(1,1,1,360deg);
+      }
+    }
+    
+    body{
+      background-image: url("kusari.png");
+      background-size: 230px;
     }
   </style>
   <body>
-    <div class="center">
+    <div class="perfect-center">
       <a href="https://zeikinndorobou.github.io/moreandmore.html">
         <img src="aheahe (2).png" alt="">
       </a>
