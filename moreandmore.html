@@ -8,6 +8,15 @@
     }
   </style>
   <body>
+    <audio src="C:\Users\yttea\Downloads\音割れ音割れ音割れaaaa.mp3" autoplay loop></audio>
+    <script>
+      const bgm = new Audio("bgm.mp3");
+bgm.loop = true;
+
+document.getElementById("play-btn").addEventListener("click", () => {
+  bgm.play();
+});
+    </script>    
   </body>
 </head>
 </html>
