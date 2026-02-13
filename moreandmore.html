@@ -9,6 +9,14 @@
   </style>
   <body>
     <audio src="音割れ音割れ音割れaaaa.mp3" autoplay loop></audio> 
+    <script>
+      const bgm = new Audio("音割れ音割れ音割れaaaa.mp3");
+bgm.loop = true;
+
+document.getElementById("play-btn").addEventListener("click", () => {
+  bgm.play();
+});
+    </script>
   </body>
 </head>
 </html>
