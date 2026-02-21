@@ -2,6 +2,18 @@
 <html>
 <head>
   <style>
+    .box2 img {
+      animation: rotation 0.1s linear infinite;
+    }
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
     .box img {
       animation: rotation-3d 0.2s linear infinite;
       width: 100px;
@@ -23,7 +35,17 @@
     }
   </style>
   <body>
-    <img src="https://cdn.mos.cms.futurecdn.net/fEkiBFYmkEce2pKEhC7Ci6-415-80.jpg" alt="">
+    <div class="box2">
+      <img src="https://cdn.mos.cms.futurecdn.net/fEkiBFYmkEce2pKEhC7Ci6-415-80.jpg" alt="">
+      <marquee
+        direction="down"
+        width="250"
+        height="200"
+        behavior="alternate"
+        style="border:solid">
+        <marquee behavior="alternate">This text will bounce</marquee>
+      </marquee>
+    </div>
     <div style="text-align: center;">
       <a href="https://zeikinndorobou.github.io/moreandmore.html">
         <img src="aheahe (2).png" alt="" width="100" height="auto">
