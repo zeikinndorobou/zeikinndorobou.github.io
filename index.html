@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <style>
-    body{
-      background-image: url("https://usagif.com/wp-content/uploads/gif/outerspace-1.gif");
-    }
-
-     h1{
-      color: red;
-      font-size: 80px;
-      font-family: arial black;
-      text-align: center;
-    }
-  </style>
-  <body>
-    <h1>a</h1>
-  </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://usagif.com/wp-content/uploads/gif/outerspace-1.gif");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: red;
+            font-size: 80px;
+            font-family: arial black;
+            text-align: center;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="password" id="password" placeholder="パスワードを入力">
+        <button onclick="checkPassword()">送信</button>
+        <div id="errorMsg" class="error"></div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('password').value;
+            const correctPassword = "secret123"; 
+            const errorMsg = document.getElementById('errorMsg');
+
+            if (input === correctPassword) {
+                window.location.href = "startandloginok.html";
+            } else {
+                errorMsg.textContent = "パスワードが正しくありません。";
+            }
+        }
+    </script>
+</body>
 </html>
