@@ -53,21 +53,21 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
-        <input type="password" id="password" placeholder="パスワードを入力">
-        <button onclick="checkPassword()">送信</button>
+        <input type="password" id="password" placeholder="Enter the password">
+        <button onclick="checkPassword()">Send</button>
         <div id="errorMsg" class="error"></div>
     </div>
 
     <script>
         function checkPassword() {
             const input = document.getElementById('password').value;
-            const correctPassword = "secret123"; 
+            const correctPassword = "615"; 
             const errorMsg = document.getElementById('errorMsg');
 
             if (input === correctPassword) {
                 window.location.href = "startandloginok.html";
             } else {
-                errorMsg.textContent = "パスワードが正しくありません。";
+                errorMsg.textContent = "The password is incorrect.";
             }
         }
     </script>
